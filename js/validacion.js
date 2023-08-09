@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (
         password1.value.length < 6 ||
         password1.value !== password2.value ||
-        !terminos.checked || nombre.value === "" || apellido.value === ""
+        !terminos.checked || nombre.value || apellido.value
       ) {
         showAlertError();
       } else {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
   
 function showAlertSuccess() {
-   document.getElementById("alert-success").classList.add("show");
+  document.getElementById("alert-success").classList.add("show");
 }
   
 function showAlertError() {
